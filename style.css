@@ -1,0 +1,36 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background: #FFE6E8;
+}
+
+nav{
+    background: #E3735E;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.container{
+    max-width: 600px;
+    margin: 30px auto;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+img{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 200px;
+}
+
+h2{ 
+    text-align: center;
+}
