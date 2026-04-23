@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Mahasiswa</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(135deg, #dff7e3, #b8e6c1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 25px;
+            border-radius: 20px;
+            width: 420px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+
+        h2 {font-family: 'Times New Roman', Times, serif;
+
+        }
+
+            label {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    margin-top: 10px;
+    color: #2f8f5b;
+    transition: 0.3s;
+}
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 12px;
+            border: 1px solid rgba(58,166,107,0.4);
+            outline: none;
+            background: rgba(255,255,255,0.6);
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            transform: scale(1.03);
+            border-color: #3aa66b;
+            box-shadow: 0 0 10px rgba(58,166,107,0.4);
+            background: rgba(255,255,255,0.9);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #3aa66b, #2f8f5b);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Segoe Script', cursive;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(58,166,107,0.4);
+        }
+
+        /* cute icon effect */
+        label::before {
+            content: " ";
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Data Mahasiswa</h2>
+
+    <form>
+        <div class="row">
+            <label>Nama</label>
+            <input type="text" name="nama" placeholder="Masukkan nama" required>
+        </div>
+
+        <div class="row">
+            <label>NIM</label>
+            <input type="number" name="nim" placeholder="Masukkan NIM" required>
+        </div>
+
+        <div class="row">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Masukkan password" required>
+        </div>
+
+        <div class="row">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Masukkan email">
+        </div>
+
+        <div class="row">
+            <label>No HP</label>
+            <input type="tel" name="nohp" placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="row">
+            <label>Website</label>
+            <input type="url" name="website" placeholder="https://">
+        </div>
+
+        <div class="row">
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tgl_lahir">
+        </div>
+
+        <div class="row">
+            <label>Warna Favorit</label>
+            <input type="color" name="warna">
+        </div>
+
+        <div class="row">
+            <label>Kepuasan (1-10)</label>
+            <input type="range" min="1" max="10" name="kepuasan">
+        </div>
+
+        <div class="row">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <label><input type="radio" name="jk" value="Laki-laki"> Laki-laki</label>
+                <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Hobi</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Membaca"> Membaca</label>
+                <label><input type="checkbox" value="Olahraga"> Olahraga</label>
+                <label><input type="checkbox" value="Musik"> Musik</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Upload Foto</label>
+            <input type="file" name="foto">
+        </div>
+
+        <div class="row">
+            <label>Alamat</label>
+            <textarea rows="3" placeholder="Masukkan alamat"></textarea>
+        </div>
+
+        <div class="row">
+            <label>Jurusan</label>
+            <select>
+                <option>-- Pilih Jurusan --</option>
+                <option>Informatika</option>
+                <option>Sistem Informasi</option>
+                <option>Teknik Komputer</option>
+            </select>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
