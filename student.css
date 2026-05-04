@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    /* Background gradient */
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+
+    /* Biar tinggi full layar */
+    min-height: 100vh;
+}
+
+/* Judul */
+h1 {
+    color: #333;
+}
+
+h2 {
+    margin-left: 20px;
+    color: #444;
+}
+
+/* Table navbar */
+table {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* Link navbar */
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #00796b;
+}

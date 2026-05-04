@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+table {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+}
+
+td {
+    padding: 10px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+
+a:hover {
+    color: #1b5e20;
+}
+img {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
