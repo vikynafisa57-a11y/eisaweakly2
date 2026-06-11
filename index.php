@@ -6,9 +6,9 @@
     </head>
     <body>
         <nav>
-            <a href="index.html">Profil</a>
-            <a href="about.html">About Me</a>
-            <a href="kontak.html">Contact</a>
+            <a href="index.php">Profil</a>
+            <a href="about.php">About Me</a>
+            <a href="kontak.php">Contact</a>
         </nav>
 
         <div class="container">

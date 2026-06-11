@@ -7,10 +7,33 @@
 
     <body>
         <nav>
-            <a href="index.html">Profil</a>
-            <a href="about.html">About Me</a>
-            <a href="kontak.html">Contact</a>
+            <a href="index.php">Profil</a>
+            <a href="about.php">About Me</a>
+            <a href="kontak.php">Contact</a>
+             <a href="student.php">Data Mahasiswa</a>
         </nav>
+
+        <table>
+            <tr>
+    <th>NO</th>
+    <th>Nama</th>
+    <th>NIM</th>
+    <th>Prodi</th>
+    <th>email</th>
+    <th>Nomor wa/th>
+    <th>Foto</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Viky Diana Nafisa</td>
+    <td>1325272722</td>
+    <td>Teknologi Informasi</td>
+    <td> sasa@gmail.com</td>
+    <td>068363596226</td>
+    <td><img src="eisa.jpeg" width="50px"></td>
+</tr>
+</table>
 
         <div class="container">
             <h2>About Me</h2>
