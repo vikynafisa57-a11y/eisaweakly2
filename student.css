@@ -1,38 +1,70 @@
-body {
-    margin: 0;
-    padding: 20px;
+body{
     font-family: Arial, sans-serif;
-
-    /* Background gradient */
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
-
-    /* Biar tinggi full layar */
-    min-height: 100vh;
+    margin: 20px;
+    background-color: #f5f5f5;
 }
 
-/* Judul */
-h1 {
-    color: #333;
+.judul{
+    text-align: center;
+    margin-top: 20px;
 }
 
-h2 {
-    margin-left: 20px;
-    color: #444;
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Table navbar */
-table {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
 
-/* Link navbar */
-a {
+.navbar a{
     text-decoration: none;
-    color: #333;
+    color: white;
+    background: #007bff;
+    padding: 12px 20px;
+    border-radius: 10px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-a:hover {
-    color: #00796b;
+/* Efek popup saat disentuh */
+.navbar a:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Tabel utama */
+table{
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th{
+    background: #007bff;
+    color: white;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Tombol */
+button{
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+a button{
+    background: #28a745;
+    color: white;
 }

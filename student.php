@@ -8,23 +8,18 @@
 <link rel="stylesheet" href="student.css">
 </head>
 <body>
-<h1 align="center">
-    web ti eisa 26
-</h1>
+<h1 class="judul">Web TI Eisa 26</h1>
 
-<nav>
-            <a href="index.php">Profil</a>
-            <a href="about.php">About Me</a>
-            <a href="kontak.php">Contact</a>
-             <a href="student.php">Data Mahasiswa</a>
-        </nav>
+<nav class="navbar">
+    <a href="index.php">Profil</a>
+    <a href="about.php">About Me</a>
+    <a href="kontak.php">Contact</a>
+    <a href="student.php">Data Mahasiswa</a>
+</nav>
 
 <table border="1px" align="center" cellspacing="0" cellpadding="10px">
 <tr> 
-    <td><a href="index.php" >Home</a></td>
-    <td><a href="about.php">Profile</a></td>
-    <td><a href="kontak.php">kontak</a></td>
-    <td> <a href="student.php">Data Mahasiswa</a></td>
+    
 </tr>
 <tr>
     <th>NO</th>
