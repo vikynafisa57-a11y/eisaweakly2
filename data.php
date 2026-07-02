@@ -1,3 +1,24 @@
+<?php
+require 'fungsi.php';
+
+if(isset($_POST["submit"])){
+
+    if(tambahdata($_POST) > 0){
+        echo "<script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href='index.php';
+              </script>";
+    }else{
+        echo "<script>
+                alert('Data gagal ditambahkan!');
+              </script>";
+
+        echo mysqli_error($koneksi);
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,90 +32,40 @@
 <div class="container">
     <h2>Form Data Mahasiswa</h2>
 
-    <form>
+    <form action="" method="post">
         <div class="row">
             <label>Nama</label>
-            <input type="text" name="nama" placeholder="Masukkan nama" required>
+            <input type="text" name="nama" id="nama" placeholder="Masukkan Nama" required>
         </div>
 
         <div class="row">
             <label>NIM</label>
-            <input type="number" name="nim" placeholder="Masukkan NIM" required>
-        </div>
-
-        <div class="row">
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Masukkan password" required>
-        </div>
-
-        <div class="row">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Masukkan email">
-        </div>
-
-        <div class="row">
-            <label>No HP</label>
-            <input type="tel" name="nohp" placeholder="08xxxxxxxxxx">
-        </div>
-
-        <div class="row">
-            <label>Website</label>
-            <input type="url" name="website" placeholder="https://">
-        </div>
-
-        <div class="row">
-            <label>Tanggal Lahir</label>
-            <input type="date" name="tgl_lahir">
-        </div>
-
-        <div class="row">
-            <label>Warna Favorit</label>
-            <input type="color" name="warna">
-        </div>
-
-        <div class="row">
-            <label>Kepuasan (1-10)</label>
-            <input type="range" min="1" max="10" name="kepuasan">
-        </div>
-
-        <div class="row">
-            <label>Jenis Kelamin</label>
-            <div class="radio-group">
-                <label><input type="radio" name="jk" value="Laki-laki"> Laki-laki</label>
-                <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <label>Hobi</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" value="Membaca"> Membaca</label>
-                <label><input type="checkbox" value="Olahraga"> Olahraga</label>
-                <label><input type="checkbox" value="Musik"> Musik</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <label>Upload Foto</label>
-            <input type="file" name="foto">
-        </div>
-
-        <div class="row">
-            <label>Alamat</label>
-            <textarea rows="3" placeholder="Masukkan alamat"></textarea>
+            <input type="text" name="nim" id="nim" placeholder="Masukkan NIM" required>
         </div>
 
         <div class="row">
             <label>Jurusan</label>
-            <select>
-                <option>-- Pilih Jurusan --</option>
-                <option>Informatika</option>
-                <option>Teknologi Informasi</option>
-                <option>Teknik Komputer</option>
-            </select>
+            <input type="text" name="jurusan" id="jurusan" placeholder="Masukkan Jurusan" required>
         </div>
 
-        <button class="submit-btn" type="submit">Submit</button>
+        <div class="row">
+            <label>Email</label>
+            <input type="email" name="email" id="email" placeholder="Masukkan Email">
+        </div>
+
+        <div class="row">
+            <label>No HP</label>
+            <input type="text" name="nohp" id="nohp" placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="row">
+            <label>Foto</label>
+            <input type="text" name="foto" id="foto" placeholder="Masukkan nama file foto">
+        </div>
+
+        <button class="submit-btn" type="submit" name="submit">
+            Submit
+        </button>
     </form>
 </div>
 
