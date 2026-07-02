@@ -1,8 +1,10 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "eisaweekly");
+    require "fungsi.php";
 
-$query = "SELECT * FROM mahasiswa";
-$result = mysqli_query($koneksi, $query);
+    $query = "SELECT * FROM mahasiswa";
+
+    $mahasiswa = tampildata($query); ///wadah isi data
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +42,8 @@ $result = mysqli_query($koneksi, $query);
 
     <?php
     $no = 1;
-    while ($mhs = mysqli_fetch_assoc($result)) {
+    foreach($mahasiswa as $mhs)
+        {
     ?>
         <tr>
             <td><?= $no++; ?></td>
@@ -57,12 +60,13 @@ $result = mysqli_query($koneksi, $query);
                     <button>Edit</button>
                 </a>
                 |
-                <a href="delatedata.php">
+                <a href="hapusdata.php?id=<?= $mhs["id"] ?>" onclick="return confirm('Yakin Igin di Hapus?')">
                     <button>Hapus</button>
                 </a>
             </td>
         </tr>
     <?php
+    
     }
     ?>
 </table>
