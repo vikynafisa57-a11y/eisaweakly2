@@ -3,7 +3,9 @@ require 'fungsi.php';
 
 if(isset($_POST["submit"])){
 
-    if(tambahdata($_POST) > 0){
+
+
+    if(tambahdata($_POST, $_FILES["foto"]) > 0){
         echo "<script>
                 alert('Data berhasil ditambahkan!');
                 document.location.href='index.php';
@@ -32,7 +34,7 @@ if(isset($_POST["submit"])){
 <div class="container">
     <h2>Form Data Mahasiswa</h2>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <div class="row">
             <label>Nama</label>
             <input type="text" name="nama" id="nama" placeholder="Masukkan Nama" required>
@@ -60,7 +62,7 @@ if(isset($_POST["submit"])){
 
         <div class="row">
             <label>Foto</label>
-            <input type="text" name="foto" id="foto" placeholder="Masukkan nama file foto">
+            <input type="file" name="foto" id="foto" placeholder="Masukkan nama file foto">
         </div>
 
         <button class="submit-btn" type="submit" name="submit">
